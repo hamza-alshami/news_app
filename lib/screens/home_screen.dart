@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/widgets/category_list_horizontal.dart';
+import 'package:news_app/widgets/news_list.dart';
+import 'package:news_app/widgets/news_tile.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -29,9 +31,15 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
 
-      body: CategoryListHorizontal(),
+      body: Padding(
+        padding: const EdgeInsets.all(15),
+        child: Column(
+          children: [
+            CategoryListHorizontal(),
+            Expanded(child: NewsList()),
+          ],
+        ),
+      ),
     );
   }
 }
-
-
