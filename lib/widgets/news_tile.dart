@@ -11,11 +11,16 @@ class NewsTile extends StatelessWidget {
     return Column(
       children: [
         ClipRRect(
-          borderRadius: BorderRadiusGeometry.circular(5),
-          child: Image.asset(news.img),
+          borderRadius: BorderRadius.circular(5),
+          child: news.img.isNotEmpty
+              ? Image.network(news.img, fit: BoxFit.cover)
+              : Image.asset(
+                  "assets/no_img.png",
+                  height: 150,
+                  width: 150,
+                ),
         ),
         Text(
-          textDirection: TextDirection.rtl,
           news.title,
           style: TextStyle(
             fontWeight: FontWeight.bold,
@@ -23,7 +28,6 @@ class NewsTile extends StatelessWidget {
           ),
         ),
         Text(
-          textDirection: TextDirection.rtl,
           news.news,
           style: TextStyle(
             color: Colors.grey,

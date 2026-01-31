@@ -3,7 +3,9 @@ class NewsModel {
   final String news;
   final String img;
 
- const NewsModel({required this.title, required this.news, required this.img});
-
-
+  const NewsModel({
+    required this.title,
+    required this.news,
+    required this.img,
+  });
 }
