@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:news_app/widgets/category_list_horizontal.dart';
 import 'package:news_app/widgets/news_list.dart';
@@ -42,3 +43,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+*/
