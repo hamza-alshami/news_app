@@ -8,6 +8,7 @@ class NewsServices {
 
   Future<List<NewsModel>> getNews() async {
     return await Future.delayed(Duration(seconds: 3), () async {
+      try {
       var response = await dio.get(
         'https://newsapi.org/v2/top-headlines?country=us&apiKey=881acceee1894b329540e5e0711c8ea3',
       );
@@ -23,7 +24,11 @@ class NewsServices {
         );
         articlesList.add(newsModel);
       }
+      
       return articlesList;
+      } catch(e){
+        return[];
+      }
     });
   }
 }
