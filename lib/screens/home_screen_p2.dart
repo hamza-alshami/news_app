@@ -41,7 +41,7 @@ class TestScreen extends StatelessWidget {
           ),
           SliverPadding(
             padding: const EdgeInsets.all(15),
-            sliver: NewsListWidgetBuilder(),
+            sliver: NewsListWidgetBuilder(category: 'general',),
           ),
         ],
       ),
